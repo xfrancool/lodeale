@@ -6,6 +6,7 @@
     <title>Ventas de Empanadas, Lomitos y Hamburguesas</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+    <link rel="manifest" href="/manifest.json" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -87,23 +88,36 @@
           <label for="phone">Número de celular:</label>
           <input type="tel" id="phone" name="phone" />
         </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" />
-        </div>
-        <div class="form-group" id="delivery">
+
+        <div class="form-group" id="deli">
           <label for="delivery">🛵 Entrega a domicilio:</label>
           <input type="checkbox" id="delivery" name="delivery" />
         </div>
-        <a href="https://maps.app.goo.gl/qK8fnoXbUDZG8SmdA"
+        <a href="https://maps.app.goo.gl/qK8fnoXbUDZG8SmdA" target="_blank"
           >Lugar de Retiro en caso de no necesitar delivery 👈</a
         >
+        <br />
+
+        <div class="centered-container">
+          <div class="clipboard-container">
+            <input type="text" value="Rocio310100" id="myInput" readonly />
+            <div class="tooltip">
+              <button type="button" onclick="myFunction()">Alias</button>
+            </div>
+          </div>
+        </div>
+
         <br />
         <button type="button" class="submit-button" onclick="sendOrder()">
           Enviar Pedido
         </button>
+        <br />
+        <button id="installButton" type="button" style="display: none">
+          Instalar Aplicación
+        </button>
       </form>
     </div>
     <script src="scripts.js"></script>
+    <script type="module" src="btninstall.js"></script>
   </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "short_name": "Sabor Casero",
+  "name": "Sabor Casero",
+
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a1f8f",
+  "description": "Ventas de Empanadas, Lomitos y Hamburguesas",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "https://xfrancool.github.io/imgweb/logo.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "https://xfrancool.github.io/imgweb/logo.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "https://xfrancool.github.io/imgweb/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
