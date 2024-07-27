@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ventas de Empanadas, Lomitos y Hamburguesas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img src="logo.png" alt="Logo" class="cover-image" />
+      <h5>Ventas de Empanadas, Lomitos y Hamburguesas</h5>
+      <p>Arma tu pedido & te decimos el tiempo de espera..</p>
+
+      <br />
+      <form id="orderForm">
+        <div class="form-group">
+          <label for="empanadasQty">Docenas de empanadas:</label>
+          <div class="input-group">
+            <button type="button" onclick="changeQty('empanadasQty', -1)">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input
+              type="number"
+              id="empanadasQty"
+              name="empanadasQty"
+              min="0"
+              value="0"
+            />
+            <button type="button" onclick="changeQty('empanadasQty', 1)">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lomitosQty">Hamburguesa:</label>
+          <div class="input-group">
+            <button type="button" onclick="changeQty('lomitosQty', -1)">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input
+              type="number"
+              id="lomitosQty"
+              name="lomitosQty"
+              min="0"
+              value="0"
+            />
+            <button type="button" onclick="changeQty('lomitosQty', 1)">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="hamburguesasQty"
+            >2 Hamburguesa con papas: (Promoción)</label
+          >
+          <div class="input-group">
+            <button type="button" onclick="changeQty('hamburguesasQty', -1)">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input
+              type="number"
+              id="hamburguesasQty"
+              name="hamburguesasQty"
+              min="0"
+              value="0"
+            />
+            <button type="button" onclick="changeQty('hamburguesasQty', 1)">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="total">Total:</label>
+          <input type="text" id="total" name="total" readonly />
+        </div>
+        <div class="form-group">
+          <label for="address">Domicilio:</label>
+          <input type="text" id="address" name="address" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Número de celular:</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div class="form-group" id="delivery">
+          <label for="delivery">🛵 Entrega a domicilio:</label>
+          <input type="checkbox" id="delivery" name="delivery" />
+        </div>
+        <a href="https://maps.app.goo.gl/qK8fnoXbUDZG8SmdA"
+          >Lugar de Retiro en caso de no necesitar delivery 👈</a
+        >
+        <br />
+        <button type="button" class="submit-button" onclick="sendOrder()">
+          Enviar Pedido
+        </button>
+      </form>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
